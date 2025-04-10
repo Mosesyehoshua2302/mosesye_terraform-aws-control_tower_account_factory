@@ -5,16 +5,16 @@ module "finops_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail = "mosesye+CTLZSandbox@amazon.com"
+    AccountEmail = "mosesye+smeaccount@amazon.com"
     AccountName  = "AFT Sandbox"
     ManagedOrganizationalUnit = "Root"
-    SSOUserEmail     = "mosesye+CTLZSandbox@amazon.com"
-    SSOUserFirstName = "Sandbox"
-    SSOUserLastName  = "Admin"
+    SSOUserEmail     = "mosesye+smeaccount@amazon.com"
+    SSOUserFirstName = "SME"
+    SSOUserLastName  = "AdmiAccountn"
   }
 
   account_tags = {
-    "ABC:Owner"       = "mosesye+CTLZSandbox@amazon.com"
+    "ABC:Owner"       = "mosesye+smeaccount@amazon.com"
     "ABC:Division"    = "ENT"
     "ABC:Environment" = "Dev"
     "ABC:CostCenter"  = "123456"
@@ -26,7 +26,7 @@ module "finops_account" {
 
   change_management_parameters = {
     change_requested_by = "Moses Yehoshua"
-    change_reason       = "Creating Sandboc Account in Root"
+    change_reason       = "Creating sme test account Account in Root"
   }
 
   custom_fields = {
@@ -34,5 +34,5 @@ module "finops_account" {
     custom2 = "b"
   }
 
-  account_customizations_name = "sandbox-account-customizations"
+  account_customizations_name = "sme-account-customizations"
 }
